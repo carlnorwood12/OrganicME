@@ -1,0 +1,20 @@
+<svg class="main svelte-1ahfjoa" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 500 700"><style>.multiply { mix-blend-mode: multiply }
+            .normal { mix-blend-mode: normal }
+            .overlay { mix-blend-mode: overlay }
+            .screen { mix-blend-mode: screen }
+            .darken { mix-blend-mode: darken }
+            .lighten { mix-blend-mode: lighten }
+            .color-dodge { mix-blend-mode: color-dodge }
+            .saturation { mix-blend-mode: saturation }
+            .color { mix-blend-mode: color }
+            .luminosity { mix-blend-mode: luminosity }
+            .hard-light { mix-blend-mode: hard-light }
+            .soft-light { mix-blend-mode: soft-light }
+            .difference { mix-blend-mode: difference }
+            .exclusion { mix-blend-mode: exclusion }
+            .hue { mix-blend-mode: hue }
+        </style><defs><filter id="blur1" width="120%" height="120%" filterUnits="userSpaceOnUse" x="-10%" y="-10%"><feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur"></feGaussianBlur></filter></defs>
+        <rect width="700" height="525" fill="#00000000"></rect><g filter="url(#blur1)">
+            <circle cy="516" cx="335" r="200" fill="#9fd1c5" class="screen svelte-1ahfjoa"></circle>
+            <circle cy="9" cx="336" r="200" fill="#00000000" class="screen svelte-1ahfjoa"></circle>
+            <circle cy="277.5" cx="332" r="200" fill="#d8cd7e" class="screen svelte-1ahfjoa"></circle></g></svg>
