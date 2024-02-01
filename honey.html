@@ -91,7 +91,7 @@
         <main class="main honey">
           <div class="reveal">
             <h1 id="honey1" style="margin-top: 2%">THE ORIGINAL</h1>
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.30/build/spline-viewer.js"></script>
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.38/build/spline-viewer.js"></script>
             <spline-viewer url="https://prod.spline.design/VhVl4AXdmgqjf0-J/scene.splinecode"></spline-viewer>
           </div>
           <div class="row">
@@ -210,6 +210,17 @@
       </footer>
       <!-- footer -->
     </body>
+    <script>
+      import purify from "purify-css";
+      const purify = require("purify-css");
+
+      let content = "";
+      let css = "";
+      let options = {
+        output: "filepath/output.css",
+      };
+      purify(content, css, options);
+    </script>
     <script src="script.js"></script>
     <script src="trustpilot.js" defer></script>
     <script src="textanimation.js"></script>

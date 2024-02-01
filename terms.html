@@ -12,6 +12,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+     
+      span {
+        position: relative;
+        font-size: clamp(15px, 1vw, 25px);
+        text-align: center;
+        width: 40%;
+        max-width: 200px;
+        font-family: chillion;
+        font-weight: 100;
+        padding: 4px;
+        background: radial-gradient(ellipse farthest-side at top center, #d8cd7e 30%, #9fd1c5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      span::before {
+        content: "";
+        position: absolute;
+        background: radial-gradient(ellipse farthest-side at top center, #d8cd7e 30%, #9fd1c5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(90deg, #9fd1c5, #d8cd7e, #9fd1c5);
+        border-image-slice: 1;
+        opacity: 0;
+        transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Added transition for opacity and transform */
+        border-bottom-width: thin;
+        left: 50%;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        transform-origin: center;
+        transform: translate(-50%, 0) scaleX(0);
+      }
+      main:hover
+      {
+        background-size: 100%;
+      }
+
+      main:hover > .item1 > span::before {
+        opacity: 1;
+        transform: translate(-50%, 0) scaleX(1);
+      }
+    </style>
   </head>
   <body>
     <body>
@@ -88,13 +133,12 @@
       <!-- Mobile navigation -->
       <!-- content -->
       <div class="content">
-        <main class="main index" style="background-image: url(/images/76413.png); background-size: cover; flex-direction: column; overflow: hidden;">
+        <main class="main index" style="background-image: url(/images/76413.png); background-size: cover; flex-direction: column; overflow: hidden">
           <div class="item1" style="background-color: rgba(0, 0, 0, 0); flex-basis: 20%; display: flex; justify-content: center; align-items: center">
-            <h1 id="honeyd" style="  font-size: clamp(15px, 1vw, 25px); text-align: center; background: radial-gradient(ellipse farthest-side at top center, #d8cd7e 30%, #9fd1c5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; border-bottom: 2px solid transparent; border-image: linear-gradient(90deg, #9fd1c5, #d8cd7e, #9fd1c5); border-image-slice: 1; border-bottom-width: thin; width: 40%; padding: 5px;">Terms & Conditions</h1>
+            <span>Terms & Conditions</span>
           </div>
-          <div class="item2" style="flex-grow: 1; display: flex; justify-content: center; align-items: center">
-            <!--Sampled from https://www.jnf.co.uk/privacy-policy/?gad_source=1&gclid=Cj0KCQiAnrOtBhDIARIsAFsSe503M6PQHvZZnVc1A6jEFHOaOgAXiXef4EJa2edN3BG7EGhRwlYIbQQaAmVOEALw_wcB-->
-            <p id="privacp" style="color: white; font-size: 10px; width: 90%; color: #969696; line-height: 2vh; text-align: center"></p>
+          <div class="item2" style="flex-grow: 1; display: flex; justify-content: center; align-items: flex-start">
+            <p id="privacp" style="color: white; font-size: 10px; width: 90%; color: #969696; line-height: 2vh; text-align: center; overflow-wrap: break-word; max-width: 80%">dededededededdedeeddedededededededededdedeeddedededededededededdedeeddedededededededededdedeeddedededededededededdedeeddedededededededededdedeeddedededededededededdedeeddededededededdededededededdedeeddedededededededededdedeeddedededededededededdedeeddedededededededededdedeeddededeedededdedeeddedede</p>
           </div>
         </main>
       </div>
@@ -162,6 +206,18 @@
       </footer>
       <!-- footer -->
     </body>
+    <script>
+      gsap.from(".main > *", {
+        opacity: 0,
+        duration: 1,
+        ease: "Power1.easeIn",
+      });
+
+      gsap.to(".main > *", {
+        opacity: 1,
+        ease: "Power1.easeIn",
+      });
+    </script>
     <script src="script.js"></script>
     <!-- for my gsap transitions-->
     <!-- for my gsap transitions-->
