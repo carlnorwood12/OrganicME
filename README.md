@@ -1,1 +1,1 @@
-no architecture
+no architecture jump is crazzyy
