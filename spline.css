@@ -1,0 +1,18 @@
+
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: black;
+}
+spline-viewer
+{
+    width: 98%;
+    height: 98%;
+    position: relative;
+}
