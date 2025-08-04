@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Button</title>
+    <style>
+      /* Base styling */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: sans-serif;
+        background-color: #131313;
+        color: #ffcf5f;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      /* Button Base Styling */
+      .button {
+        position: relative;
+        display: inline-flex;
+        padding: 1em 2em;
+        border-radius: 50px;
+        background-color: black;
+        border: 1px solid #ffcf5f;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .u--clip {
+        overflow: hidden;
+      }
+
+      /* Text Shadow Technique */
+      .button p {
+        text-shadow: 0px 1.25em currentColor;
+        color: #ffcf5f;
+      }
+      .button .single-letter {
+        display: inline-block;
+        position: relative;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/CustomEase.min.js" integrity="sha512-CuvnoNrIlhT8htAhjvvnA7EB4sUHfRvfFsjq+JvAKPotN8LlelK/lQgX+u9Gxxsl0+lXmEWRMLPv/oKT1W3dPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <div class="container">
+      <a href="#" class="button">
+        <div class="u--clip">
+          <p data-split="letters">Shop Now</p>
+        </div>
+      </a>
+    </div>
+  </body>
+</html>
